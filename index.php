@@ -2,6 +2,13 @@
 // Подключаем ядро
 require_once 'core.php';
 
-// Загружаем шаблон
-echo loadTemplate('templates/page.tpl');
+// Подготовим данные для шаблона
+$data = [
+    'title' => 'Мое приложение',
+    'username' => 'Пользователь',
+    'message' => 'Добро пожаловать в наше приложение!'
+];
+
+// Загружаем шаблон с переданными данными
+echo loadTemplate('templates/page.tpl', $data);
 ?>
